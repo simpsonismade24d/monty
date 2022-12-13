@@ -1,6 +1,9 @@
 0x19. C - Stacks, Queues - LIFO, FIFO
 
+
+
 General
+
 What do LIFO and FIFO mean
 What is a stack, and when to use it
 What is a queue, and when to use it
@@ -12,8 +15,10 @@ You are tasked to come up with solutions for the tasks below yourself to meet wi
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
 You are not allowed to publish any content of this project.
 Any form of plagiarism is strictly forbidden and will result in removal from the program.
+
+
 Requirements
-General
+
 Allowed editors: vi, vim, emacs
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=c89
 All your files should end with a new line
@@ -29,9 +34,11 @@ You are expected to do the tasks in the order shown in the project
 GitHub
 There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
 
+
 More Info
 Data structures
 Please use the following data structures for this project. Don’t forget to include them in your header file.
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -62,6 +69,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 Compilation & Output
+
 Your code will be compiled this way:
 $ gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
 Any output must be printed on stdout
@@ -86,9 +94,11 @@ push 2$
 push 4$
     push 5    $
       push    6        $
+
 pall$
 julien@ubuntu:~/monty$
 Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account:
+
 
 julien@ubuntu:~/monty$ cat -e bytecodes/001.m
 push 0 Push 0 onto the stack$
@@ -109,6 +119,7 @@ pall This is the end of our program. Monty is awesome!$
 julien@ubuntu:~/monty$
 The monty program
 
+
 Usage: monty file
 where file is the path to the file containing Monty byte code
 If the user does not give any file or more than one argument to your program, print the error message USAGE: monty file, followed by a new line, and exit with the status EXIT_FAILURE
@@ -126,7 +137,10 @@ You have to use malloc and free and are not allowed to use any other function fr
 Quiz questions
 Great! You've completed the quiz successfully! Keep going! (Show quiz)
 Tasks
+
+
 0. push, pall
+
 mandatory
 Implement the push and pall opcodes.
 
@@ -159,8 +173,9 @@ julien@ubuntu:~/monty$
 Repo:
 
 GitHub repository: monty
-  
+
 1. pint
+
 mandatory
 Implement the pint opcode.
 
@@ -186,7 +201,9 @@ Repo:
 
 GitHub repository: monty
   
+
 2. pop
+
 mandatory
 Implement the pop opcode.
 
@@ -219,7 +236,9 @@ Repo:
 
 GitHub repository: monty
   
+
 3. swap
+
 mandatory
 Implement the swap opcode.
 
@@ -248,7 +267,9 @@ Repo:
 
 GitHub repository: monty
   
+
 4. add
+
 mandatory
 Implement the add opcode.
 
@@ -280,7 +301,9 @@ Repo:
 
 GitHub repository: monty
   
+
 5. nop
+
 mandatory
 Implement the nop opcode.
 
@@ -293,7 +316,9 @@ Repo:
 
 GitHub repository: monty
   
+
 6. sub
+
 #advanced
 Implement the sub opcode.
 
@@ -322,7 +347,9 @@ Repo:
 
 GitHub repository: monty
   
+
 7. div
+
 #advanced
 Implement the div opcode.
 
@@ -339,8 +366,9 @@ If the top element of the stack is 0, print the error message L<line_number>: di
 Repo:
 
 GitHub repository: monty
-  
+
 8. mul
+
 #advanced
 Implement the mul opcode.
 
@@ -357,7 +385,9 @@ Repo:
 
 GitHub repository: monty
   
+
 9. mod
+
 #advanced
 Implement the mod opcode.
 
@@ -375,7 +405,9 @@ Repo:
 
 GitHub repository: monty
   
+
 10. comments
+
 #advanced
 Every good language comes with the capability of commenting. When the first non-space character of a line is #, treat this line as a comment (don’t do anything).
 
@@ -383,7 +415,9 @@ Repo:
 
 GitHub repository: monty
   
+
 11. pchar
+
 #advanced
 Implement the pchar opcode.
 
@@ -405,7 +439,9 @@ Repo:
 
 GitHub repository: monty
   
+
 12. pstr
+
 #advanced
 Implement the pstr opcode.
 
@@ -421,6 +457,7 @@ the value of the element is 0
 the value of the element is not in the ascii table
 If the stack is empty, print only a new line
 julien@ubuntu:~/monty$ cat bytecodes/31.m 
+
 push 1
 push 2
 push 3
@@ -435,9 +472,11 @@ push 104
 push 99
 push 83
 pstr
+
 julien@ubuntu:~/monty$ ./monty bytecodes/31.m 
 School
 julien@ubuntu:~/monty$ 
+
 
 Task collaboratively done by:
 Simpson Iseoluwa Iluyomade (simpsomismade24d) || Nnenna John (nennajohn-rain) 
